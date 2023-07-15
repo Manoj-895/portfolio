@@ -1,38 +1,297 @@
-.App {
+*{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://themewagon.github.io/proman/img/bg-header.png');
+  background-repeat: no-repeat;
+}
+
+.child {
+  min-width: 400px;
+  width: auto;
+  height: auto;
+  padding-left: 100px;
+  align-items: right;
+}
+
+.child2 {
+  flex-wrap: wrap;
+  width: 80%;
+  height: 100%;
+  color: #fff;
+}
+
+.child2 div {
+  float: right;
+  width: 50%;
+  height: 90%;
+}
+
+.child2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  box-shadow: #000 0px 2px rgba(0, 0, 0, 0);
+
+}
+
+.child {
+  .fancy {
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 1.25em 2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 13px;
+  }
+
+  .fancy::before {
+    width: 1.5625rem;
+    height: 2px;
+    background: black;
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+  }
+
+  .fancy .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+  }
+
+  .fancy .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+  }
+
+  .fancy .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+  }
+
+  .fancy .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+  }
+
+  .fancy:hover {
+    color: white;
+    background: black;
+  }
+
+  .fancy:hover::before {
+    width: 0.9375rem;
+    background: white;
+  }
+
+  .fancy:hover .text {
+    color: white;
+  }
+
+  .fancy:hover .top-key {
+    left: -2px;
+    width: 0px;
+  }
+
+  .fancy:hover .bottom-key-1,
+  .fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+  }
+}
+
+.expi_skill {
+  display: flex;
+  flex-direction: row;
+}
+
+.experience_div {
+  width: 50%;
+  height: auto;
+}
+
+.experience_div h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul {
+  list-style-type: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li:before {
+  content: "➤";
+  color: #321133;
+  margin-right: 10px;
+  font-size: 25px;
+  font-weight: 500;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.skills_div h1 {
+  text-align: center;
+}
+
+.my_cards {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.my_cards .card {
+  cursor: pointer;
+  margin: 20px;
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: #e8e8e8;
+  border-radius: 10px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-.App-link {
-  color: #61dafb;
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.my_cards .card svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.my_cards .card:hover {
+  transform: rotate(-5deg) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.my_cards .card__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card:hover .card__content {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.card:hover svg {
+  scale: 0;
+  transform: rotate(-45deg);
+}
+
+.footer_bottom {
+  margin-top: 100px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-section {
+  font-size: 14px;
+}
+
+.right-section {
+  font-size: 20px;
+  margin: 0px 30px;
+}
+
+.right-section a {
+  margin-left: 10px;
+  color: #000;
+  text-decoration: none;
+}
+
+.right-section a:hover {
+  color: #0077B5;
+}
+
+.right-section a i {
+  transition: color 0.3s ease;
+}
+
+.projects_worked {
+  margin-left: 30px;
 }
