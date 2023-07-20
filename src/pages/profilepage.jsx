@@ -12,7 +12,7 @@ export default function ProfileComponent(props) {
                     <h3>I'm</h3>
                     <h1>Manoj Kumar P B</h1>
                     <h2><Typewriter text="Front End Developer" delay={100} /></h2>
-                    <a class="fancy" href="#">
+                    <a class="fancy" href="https://www.google.com/">
                         <span class="top-key"></span>
                         <span class="text">Download CV</span>
                         <span class="bottom-key-1"></span>
