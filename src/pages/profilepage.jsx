@@ -12,7 +12,7 @@ export default function ProfileComponent(props) {
                     <h3>I'm</h3>
                     <h1>Manoj Kumar P B</h1>
                     <h2><Typewriter text="Front End Developer" delay={100} /></h2>
-                    <a className="fancy" href={require("../resume.pdf")} download="Manoj's resume" target="_blank">
+                    <a className="fancy" href={require("../resume.pdf")} download="Manoj's resume">
                         <span className="top-key"></span>
                         <span className="text">Download CV</span>
                         <span className="bottom-key-1"></span>
