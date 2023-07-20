@@ -29,7 +29,7 @@ export const myWork = [
     {
         projectName: "Buy Now Pay Later",
         tasks: ["We were creating a new application for merchant services for buy now pay later options",
-            "Played a key role by woring on UI developement and Api integration",
+            "Played a key role by working on UI developement and Api integration",
             "Worked on tasks like UI logging Error handeling Unit test case writing for the components"]
     },
     {
