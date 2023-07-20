@@ -1,5 +1,5 @@
-*{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .main_container {
@@ -22,19 +22,17 @@
 
 .child2 {
   flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
   height: 100%;
   color: #fff;
 }
 
 .child2 div {
   float: right;
-  width: 50%;
   height: 90%;
 }
 
 .child2 img {
-  width: 100%;
   height: 100%;
   object-fit: contain;
   box-shadow: #000 0px 2px rgba(0, 0, 0, 0);
@@ -294,4 +292,23 @@ footer {
 
 .projects_worked {
   margin-left: 30px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .expi_skill {
+    flex-direction: column;
+    padding-left: 10px;
+  }
+  .experience_div , .projects_worked{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .child2{
+    display: none;
+  }
+  .experience_div , .projects_worked{
+    width: 100%;
+  }
 }
